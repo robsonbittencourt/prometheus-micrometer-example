@@ -1,0 +1,19 @@
+management:
+  server:
+    port: 9090
+  endpoints:
+    web:
+      base-path: "/"
+      path-mapping:
+        prometheus: "metrics"
+      exposure:
+        include: "health, prometheus"
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    endpoint:
+      metrics:
+        enabled: false
+      prometheus:
+        enabled: true
